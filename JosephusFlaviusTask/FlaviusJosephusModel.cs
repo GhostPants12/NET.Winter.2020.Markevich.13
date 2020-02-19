@@ -6,6 +6,11 @@ namespace JosephusFlaviusTask
 {
     public static class FlaviusJosephusModel
     {
+        /// <summary>Returns the sequence of "crossed out" people.</summary>
+        /// <param name="n">The number of people.</param>
+        /// <param name="k">The index of crossed out man.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentException">Throws when n or k is negative or equal to zero.</exception>
         public static IEnumerable<int> ReturnSequence(int n, int k)
         {
             if (k <= 0)

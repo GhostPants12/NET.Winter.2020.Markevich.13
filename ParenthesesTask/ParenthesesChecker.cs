@@ -7,6 +7,7 @@ namespace ParenthesesTask
     {
         private readonly Dictionary<char, char> parenthesesCheckDictionary;
 
+        /// <summary>Initializes a new instance of the <see cref="ParenthesesChecker"/> class.</summary>
         public ParenthesesChecker()
             : this(new Dictionary<char, char>
         {
@@ -17,11 +18,17 @@ namespace ParenthesesTask
         {
         }
 
+        /// <summary>Initializes a new instance of the <see cref="ParenthesesChecker"/> class.</summary>
+        /// <param name="dictionary">The dictionary of parentheses.</param>
         public ParenthesesChecker(Dictionary<char, char> dictionary)
         {
             this.parenthesesCheckDictionary = dictionary;
         }
 
+        /// <summary>Checks the parentheses.</summary>
+        /// <param name="text">The text to check.</param>
+        /// <returns>True when all the parentheses have their pair, false when they do not.</returns>
+        /// <exception cref="System.ArgumentNullException"></exception>
         public bool CheckParentheses(string text)
         {
             if (text == null)
